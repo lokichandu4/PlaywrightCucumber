@@ -1,19 +1,14 @@
-Feature: User Authentication tests
+Feature: login page validation
 
-  Background:
-  Given User navigates to the application
-    And User click on the login link
+Scenario: login with valid user name and password
+Given Provide valid url
+When provide valid username and password
+Then click on login button
+#And verify login is success
 
 
-  Scenario: Login should be success
-    And User enter the username as "ortoni1234"
-    And User enter the password as "Pass1234"
-    When User click on the login button
-    Then Login should be success
 
-  
-  Scenario: Login should not be success
-    Given User enter the username as "koushik"
-    Given User enter the password as "Passkoushik"
-    When User click on the login button
-    But Login should fail
+Scenario: login with valid user name and password with Params
+Given Provide valid url
+When provide valid username as "mercury" and password as "mercury"
+Then click on login button
