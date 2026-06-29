@@ -7,4 +7,4 @@ Then click on submit button
 And verify login success message as "<message>"
 Examples:
 | username | password | message |
-| mercury | mercury | Login Successfully |
+| mercury1 | mercury1 | Login Successfully |

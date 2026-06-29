@@ -1,10 +1,10 @@
 {
     "default": {
-        "formatOptions" :{
-             "snippetInterface" : "async-await"
-                     },
+        "formatOptions": {
+            "snippetInterface": "async-await"
+        },
         "paths": [
-            "src/test/features/login_scenearios.feature"
+            "src/test/features/*.feature"
         ],
         "publishQuite": true,
         "dryRun": false,
@@ -15,10 +15,35 @@
         "requireModule": [
             "ts-node/register"
         ],
-        "format":[ "html:test-results/cucumber-report.html",
-        "progress", "json:test-results/cucumber-report.json"],
-        
-    "timeout": 120000
-
+        "format": [
+            "html:test-results/cucumber-report.html",
+            "progress",
+            "json:test-results/cucumber-report.json",
+            "rerun:@rerun.txt"
+        ],
+        "parallel": 2,
+        "timeout": 120000
+    },
+    "rerun": {
+        "formatOptions": {
+            "snippetInterface": "async-await"
+        },
+        "publishQuite": true,
+        "dryRun": false,
+        "require": [
+            "src/test/steps/*.ts",
+            "src/test/hooks/hooks.ts"
+        ],
+        "requireModule": [
+            "ts-node/register"
+        ],
+        "format": [
+            "html:test-results/cucumber-report.html",
+            "progress",
+            "json:test-results/cucumber-report.json",
+            "rerun:@rerun.txt"
+        ],
+        "parallel": 2,
+        "timeout": 120000
     }
 }

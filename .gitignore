@@ -10,3 +10,4 @@ src/test/features/login_scenearios.feature
 .gitignore
 .DS_Store
 cucumber-report.html
+@rerun.txt

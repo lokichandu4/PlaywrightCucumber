@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "pretest": "npx ts-node src/test/helper/init.ts",
     "test": "cucumber-js test",
     "report": "node report.cjs",
-    "test:full": "npm run test || true && npm run report"
+    "test:full": "npm run test || true && npm run report",
+    "test:failed": "cucumber-js -p rerun @rerun.txt"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +18,7 @@
     "@cucumber/cucumber": "^13.0.0",
     "@playwright/test": "^1.61.1",
     "@types/node": "^26.0.1",
+    "fs-extra": "^11.3.5",
     "multiple-cucumber-html-reporter": "^3.5.0",
     "ts-node": "^10.9.2"
   }
