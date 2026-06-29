@@ -2,7 +2,24 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "src/*": ["src/*"]
-    }
+      "src/*": [
+        "src/*"
+      ]
+    },"types": ["node"],
+    "module": "commonjs",
+    "target": "ES2022",
+    "esModuleInterop": true
   }
 }
+// {
+//   "extends": "@mchr/tsconfig/base.json",
+//   "compilerOptions": {
+//     "target": "ES2022",
+//     "module": "NodeNext",
+//     "moduleResolution": "NodeNext",
+//     "outDir": "dist",
+//     "rootDir": "src",
+//     "types": ["node"]
+//   },
+//   "include": ["src/**/*"]
+// }
