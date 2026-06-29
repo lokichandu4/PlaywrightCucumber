@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js || true && node report.cjs",
-    "report:only": "node report.cjs"
+    "test": "cucumber-js test",
+    "report": "node report.cjs",
+    "test:full": "npm run test || true && npm run report"
   },
   "keywords": [],
   "author": "",
@@ -15,7 +16,7 @@
     "@cucumber/cucumber": "^13.0.0",
     "@playwright/test": "^1.61.1",
     "@types/node": "^26.0.1",
-    "multiple-cucumber-html-reporter": "^4.0.0",
+    "multiple-cucumber-html-reporter": "^3.5.0",
     "ts-node": "^10.9.2"
   }
 }

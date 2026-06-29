@@ -11,15 +11,3 @@
     "esModuleInterop": true
   }
 }
-// {
-//   "extends": "@mchr/tsconfig/base.json",
-//   "compilerOptions": {
-//     "target": "ES2022",
-//     "module": "NodeNext",
-//     "moduleResolution": "NodeNext",
-//     "outDir": "dist",
-//     "rootDir": "src",
-//     "types": ["node"]
-//   },
-//   "include": ["src/**/*"]
-// }
