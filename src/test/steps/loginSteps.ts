@@ -55,7 +55,7 @@ Then('verify login success message as {string}', async function (string) {
   //await browser.close();
 });
 
-When('User enter the username {string}', ç(username: string) {
+When('User enter the username {string}', async function(username: string) {
   await loginPage.enterUserName(username)
 })
 
