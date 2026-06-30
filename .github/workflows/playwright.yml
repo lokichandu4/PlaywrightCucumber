@@ -25,7 +25,7 @@ jobs:
       run: npm i ts-node -D
     - name: run cucumber
       run: npm test
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       if: always()
       with:
         name: Report
