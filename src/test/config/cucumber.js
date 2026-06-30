@@ -6,7 +6,7 @@ module.exports = {
             snippetInterface: "async-await"
         },
         paths: [
-            "src/test/features/loginPageObject.feature"
+            "src/test/features/*.feature"
         ],
         publishQuite: true,
         dryRun: false,
