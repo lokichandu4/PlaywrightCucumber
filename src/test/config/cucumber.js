@@ -1,50 +1,52 @@
-{
-    "default": {
-        "tags" : "@smoke",
-        "formatOptions": {
-            "snippetInterface": "async-await"
+module.exports = {
+    
+    default: {
+        tags: process.env.npm_config_TAGS || "",
+        formatOptions: {
+            snippetInterface: "async-await"
         },
-        "paths": [
+        paths: [
             "src/test/features/*.feature"
         ],
-        "publishQuite": true,
-        "dryRun": false,
-        "require": [
+        publishQuite: true,
+        dryRun: false,
+        require: [
             "src/test/steps/*.ts",
             "src/test/hooks/hooks.ts"
         ],
-        "requireModule": [
+        requireModule: [
             "ts-node/register"
         ],
-        "format": [
+        format: [
             "html:test-results/cucumber-report.html",
             "progress",
             "json:test-results/cucumber-report.json",
             "rerun:@rerun.txt"
         ],
-        "parallel": 2,
-        "timeout": 60000
+        parallel: 2,
+        timeout: 60000
     },
-    "rerun": {
-        "formatOptions": {
-            "snippetInterface": "async-await"
+    rerun: {
+        formatOptions: {
+            snippetInterface: "async-await"
         },
-        "publishQuite": true,
-        "dryRun": false,
-        "require": [
+        publishQuite: true,
+        dryRun: false,
+        require: [
             "src/test/steps/*.ts",
             "src/test/hooks/hooks.ts"
         ],
-        "requireModule": [
+        requireModule: [
             "ts-node/register"
         ],
-        "format": [
+        format: [
             "html:test-results/cucumber-report.html",
             "progress",
             "json:test-results/cucumber-report.json",
             "rerun:@rerun.txt"
         ],
-        "parallel": 2,
-        "timeout": 60000
+        parallel: 2,
+        timeout: 60000
     }
+
 }

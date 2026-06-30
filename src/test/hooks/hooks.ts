@@ -7,7 +7,7 @@ import { getENV } from "../helper/env/env";
 
 let page: Page;
 let browser: Browser;
-setDefaultTimeout(30000);
+setDefaultTimeout(20000);
 BeforeAll(async function () {
   getENV()
   browser = await invokeBrowser()

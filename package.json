@@ -6,7 +6,9 @@
   "scripts": {
     "pretest": "npx ts-node src/test/helper/init.ts",
     "test": "cross-env ENV=test cucumber-js test || true",
+    "test:smoke": "cross-env ENV=test cucumber-js --tags '@smoke' || true",
     "report": "node report.cjs",
+    "run:smoke": "npm run test:smoke && npm run report",
     "test:full": "npm run test || true && npm run report",
     "test:failed": "cucumber-js -p rerun @rerun.txt"
   },
