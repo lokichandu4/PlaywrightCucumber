@@ -5,9 +5,16 @@
       "src/*": [
         "src/*"
       ]
-    },"types": ["node"],
+    },
+    "types": [
+      "node"
+    ],
     "module": "commonjs",
     "target": "ES2022",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "typeRoots": [
+      "./node_modules/@types",
+      "src/test/helper/types/env.d.ts"
+    ]
   }
 }
