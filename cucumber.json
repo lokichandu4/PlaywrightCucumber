@@ -1,11 +1,11 @@
 {
     "default": {
-        "tags" : "@smoke",
+        "tags" : "@poj",
         "formatOptions": {
             "snippetInterface": "async-await"
         },
         "paths": [
-            "src/test/features/*.feature"
+            "src/test/features/loginPageObject.feature"
         ],
         "publishQuite": true,
         "dryRun": false,
@@ -22,8 +22,8 @@
             "json:test-results/cucumber-report.json",
             "rerun:@rerun.txt"
         ],
-        "parallel": 2,
-        "timeout": 60000
+        "parallel": 1,
+        "timeout": 120000
     },
     "rerun": {
         "formatOptions": {

@@ -5,9 +5,11 @@ import { pageFixture } from  "../hooks/pageFixture";
 
 import { expect } from "@playwright/test";
 import { chromium, Browser, Page } from "@playwright/test";
-let browser: Browser;
+import LoginPage from "../pageObjects/LoginPage";
+//let browser: Browser;
 //let page: Page;
 
+const loginPage = new LoginPage();
 
 Given('Provide valid url', async function () {
   //browser = await chromium.launch({ headless: false })
@@ -48,7 +50,19 @@ Then('click on submit button', async function () {
 
 Then('verify login success message as {string}', async function (string) {
   const msg = await pageFixture.page?.locator("//h3[normalize-space()='Login Successfully']").textContent()
-  expect(msg).toEqual(string)
+  await expect(msg).toEqual(string)
    //await pageFixture.page?.close();
   //await browser.close();
 });
+
+When('User enter the username {string}', ç(username: string) {
+  await loginPage.enterUserName(username)
+})
+
+When('User enetr ther password as {string}', async function(password: string) {
+  await loginPage.enterPasswrod(password)
+})
+
+Then('User clicks on login button',async function () {
+  await loginPage.clickSubmit()
+})
